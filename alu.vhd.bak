@@ -1,0 +1,55 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY alu IS 
+	PORT (
+		a,b: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		selector: IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		a7Seg, b7Seg, result7Seg: OUT STD_LOGIC_VECTOR (6 DOWNTO 0);
+		cout, overflow, negative, cout: OUT STD_LOGIC
+	);
+END alu; 
+
+ARCHITECTURE struct OF alu IS 
+COMPONENT adderSubtractor IS 
+	PORT (
+		sub: IN STD_LOGIC; 
+		a,b: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		result: OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+		cout, overflow: OUT STD_LOGIC
+	);
+END COMPONENT;
+COMPONENT binTo7Seg IS 
+	PORT (
+		binary: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		in7Seg: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+	);
+END COMPONENT;
+SIGNAL result: STD_LOGIC_VECTOR (3 DOWNTO 0);
+
+BEGIN
+PROCESS(selector)
+BEGIN 
+	IF selector = "000" THEN => adder: adderSubtractor PORT MAP ('0', a, b, result, cout, overflow);
+		ELSIF selector = "001" THEN => subtractor: adderSubtractor PORT MAP ('1', a, b, result, cout, overflow);
+		ELSIF selector = "010" THEN => increment:  adderSubtractor PORT MAP ('0', a, "0001", result, cout, overflow);
+		ELSIF selector = "011" THEN => decrement:  adderSubtractor PORT MAP ('1', a, "0001", result, cout, overflow);
+		ELSIF selector = "100" THEN => result <= a AND b; cout <= '0'; overflow <= '0';
+		ELSIF selector = "101" THEN => result <= a OR b; cout <= '0'; overflow <= '0';
+		ELSIF selector = "110" THEN => result <= NOT a; cout <= '0'; overflow <= '0';
+		ELSIF selector = "001" THEN => result <= a XOR b; cout <= '0'; overflow <= '0';
+		ELSE NULL; 
+	END IF; 
+	END PROCESS;
+	
+	negative <= result(3);
+	zero <= result(3) NOR result(2) NOR result(1) NOR result(0);
+	first7Seg: binTo7Seg PORT MAP (a, a7Seg); 
+	second7Seg: binTo7Seg PORT MAP (b, b7Seg);
+	sum7Seg: binTo7Seg PORT MAP (result, result7Seg); 
+
+END struct;
+		
+	
+
+

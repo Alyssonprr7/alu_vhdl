@@ -1,0 +1,343 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/calindra/Documentos/Trabalho_1/simulation/modelsim
+Eaddersubtractor
+Z1 w1628984213
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8/home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd
+Z5 F/home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd
+l0
+L27 1
+V17:XIj;7=S6;23Q?g_5o50
+!s100 CY@`OMBlae:3X<HIS<fRQ0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1629310779
+!i10b 1
+Z8 !s108 1629310779.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd|
+Z10 !s107 /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+DEx4 work 15 addersubtractor 0 22 17:XIj;7=S6;23Q?g_5o50
+!i122 0
+l47
+L36 25
+VnUEBI>E:84:Y3mQ3Ede9S2
+!s100 7HQUMckii`mU9RZDb2KM_3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+Z13 w1628860419
+R2
+R3
+!i122 2
+R0
+Z14 8/home/calindra/Documentos/Trabalho_1/alu.vhd
+Z15 F/home/calindra/Documentos/Trabalho_1/alu.vhd
+l0
+L4 1
+VRj4Y7>_:agIalD[:7C?Z41
+!s100 _M>z^==9OBgSV@A_z2j`^0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/calindra/Documentos/Trabalho_1/alu.vhd|
+Z17 !s107 /home/calindra/Documentos/Trabalho_1/alu.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 3 alu 0 22 Rj4Y7>_:agIalD[:7C?Z41
+!i122 2
+l26
+L13 65
+V8hIo_P8F@FN8dYCzJ^mU]1
+!s100 UjUmTcE3`io5DLW;65JWn0
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ebinaryto7seghex
+Z18 w1627905192
+R2
+R3
+!i122 1
+R0
+Z19 8/home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd
+Z20 F/home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd
+l0
+L4 1
+VRjdn0Dn4lnJJ4I4MYad]Z0
+!s100 bec=MRiTcSzO:K[nR2AJk0
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd|
+Z22 !s107 /home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 15 binaryto7seghex 0 22 Rjdn0Dn4lnJJ4I4MYad]Z0
+!i122 1
+l13
+L11 26
+VFD8=?ZbjWmKm7?k3DA:603
+!s100 UL[hR2bHmGF;oYD]G92f01
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Ecounter
+Z23 w1629162226
+Z24 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z25 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+!i122 4
+R0
+Z26 8/home/calindra/Documentos/Trabalho_1/counter.vhd
+Z27 F/home/calindra/Documentos/Trabalho_1/counter.vhd
+l0
+L5 1
+VJA]_3Pm3zSXP[WHcF0MKm0
+!s100 ?Y0T=d0F_R7DZ?X3ZJVo[3
+R6
+31
+Z28 !s110 1629310780
+!i10b 1
+R8
+Z29 !s90 -reportprogress|300|-93|-work|work|/home/calindra/Documentos/Trabalho_1/counter.vhd|
+Z30 !s107 /home/calindra/Documentos/Trabalho_1/counter.vhd|
+!i113 1
+R11
+R12
+Astruct
+R24
+R25
+R2
+R3
+DEx4 work 7 counter 0 22 JA]_3Pm3zSXP[WHcF0MKm0
+!i122 4
+l14
+L13 23
+V6Q@3cOfKZihG4LFc_5fHd1
+!s100 HgA5Q>IF9GB[77Y<VhzW@2
+R6
+31
+R28
+!i10b 1
+R8
+R29
+R30
+!i113 1
+R11
+R12
+Efulladder
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L5 1
+VU41^zdYAV?HLoU693Bfk12
+!s100 OdTS4[LQol[V054GGORR00
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 9 fulladder 0 22 U41^zdYAV?HLoU693Bfk12
+!i122 0
+l13
+L12 6
+V_JQFgJCGYoiOfN3O?flzd1
+!s100 d:2=0[;CY=Q1Eggfb@M=12
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einterface
+Z31 w1629296054
+R2
+R3
+!i122 3
+R0
+Z32 8/home/calindra/Documentos/Trabalho_1/interface.vhd
+Z33 F/home/calindra/Documentos/Trabalho_1/interface.vhd
+l0
+L4 1
+VFZ5g72MIOODOm3VhR3<=V3
+!s100 HXGhlQTFG5Yc[TQUgok422
+R6
+31
+R7
+!i10b 1
+R8
+Z34 !s90 -reportprogress|300|-93|-work|work|/home/calindra/Documentos/Trabalho_1/interface.vhd|
+Z35 !s107 /home/calindra/Documentos/Trabalho_1/interface.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 9 interface 0 22 FZ5g72MIOODOm3VhR3<=V3
+!i122 3
+l33
+L13 43
+V6D7iKG`[Bl5_6FOGFOVVQ1
+!s100 884O9MJDIPQ09lJmfKidL1
+R6
+31
+R7
+!i10b 1
+R8
+R34
+R35
+!i113 1
+R11
+R12
+Einterfacewithcounter
+Z36 w1629299969
+R2
+R3
+!i122 6
+R0
+Z37 8/home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd
+Z38 F/home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd
+l0
+L3 1
+V=<_376Vab5UMH^_DhYnXV0
+!s100 ;jCA6X9aBoYoA9O9IKW4D0
+R6
+32
+Z39 !s110 1629310791
+!i10b 1
+Z40 !s108 1629310791.000000
+Z41 !s90 -reportprogress|300|-work|work|/home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd|
+Z42 !s107 /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd|
+!i113 1
+Z43 o-work work
+R12
+Astruct
+R2
+R3
+DEx4 work 20 interfacewithcounter 0 22 =<_376Vab5UMH^_DhYnXV0
+!i122 6
+l34
+L13 42
+VH?TRg1doY]GLh?R`HXcE>3
+!s100 KOU;7lk@N6XCA]@8<eOPD0
+R6
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R43
+R12
+Einterfacewithcountertest
+Z44 w1629310607
+R2
+R3
+!i122 7
+R0
+Z45 8/home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd
+Z46 F/home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd
+l0
+L4 1
+VDi5UWTW]c5]TNf3ET7J6>1
+!s100 Sf^@5^NmcLDBUKQlRZ82W1
+R6
+32
+R39
+!i10b 1
+R40
+Z47 !s90 -reportprogress|300|-work|work|/home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd|
+!s107 /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd|
+!i113 1
+R43
+R12
+Abehavior
+R2
+R3
+DEx4 work 24 interfacewithcountertest 0 22 Di5UWTW]c5]TNf3ET7J6>1
+!i122 7
+l30
+L8 79
+VoP1LRI;n5cBiDTPggahcS2
+!s100 j6ngP^W[`imK3hk^WP>QN1
+R6
+32
+R39
+!i10b 1
+R40
+R47
+Z48 !s107 /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd|
+!i113 1
+R43
+R12

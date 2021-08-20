@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "G_HEX7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX7[4]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX7[6]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "G_HEX5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "G_LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G_LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G_LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G_LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "V_SW[15]",
+					"strict" : false
+				},
+				{
+					"name" : "V_SW[14]",
+					"strict" : false
+				},
+				{
+					"name" : "V_SW[16]",
+					"strict" : false
+				},
+				{
+					"name" : "V_SW[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

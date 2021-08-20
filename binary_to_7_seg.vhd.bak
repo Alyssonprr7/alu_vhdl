@@ -1,0 +1,36 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY binaryTo7SegHex IS
+	PORT (binary: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+			7Seg: OUT STD_LOGIC_VECTOR (6 DOWNTO 0); 
+			);
+
+ARCHITECTURE Behavioral OF binaryTo7SegHex IS 
+
+BEGIN
+
+PROCESS (binary)
+BEGIN 
+	IF binary = "0000" THEN 7Seg <= "0000001";
+		ELSIF binary = "0001" THEN 7Seg <= "1001111";
+		ELSIF binary = "0010" THEN 7Seg <= "0010010";
+		ELSIF binary = "0011" THEN 7Seg <= "0000110";
+		ELSIF binary = "0100" THEN 7Seg <= "1001100";
+		ELSIF binary = "0101" THEN 7Seg <= "0100100";
+		ELSIF binary = "0110" THEN 7Seg <= "0100000";
+		ELSIF binary = "0111" THEN 7Seg <= "0001111";
+		ELSIF binary = "1000" THEN 7Seg <= "0000000";
+		ELSIF binary = "1001" THEN 7Seg <= "0000100";
+		ELSIF binary = "1010" THEN 7Seg <= "0001000";
+		ELSIF binary = "1011" THEN 7Seg <= "1100000";
+		ELSIF binary = "1100" THEN 7Seg <= "0110001";
+		ELSIF binary = "1101" THEN 7Seg <= "1000010";
+		ELSIF binary = "1110" THEN 7Seg <= "0110000";
+		ELSIF binary = "1111" THEN 7Seg <= "0111000";
+		ELSE NULL;
+	END IF;
+END PROCESS; 
+END Behavioral; 
+	
+		

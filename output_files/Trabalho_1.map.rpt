@@ -1,0 +1,429 @@
+Analysis & Synthesis report for Trabalho_1
+Fri Aug 20 09:52:39 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement"
+ 11. Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment"
+ 12. Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor"
+ 13. Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder"
+ 14. Port Connectivity Checks: "interfaceWithCounter:conection"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Aug 20 09:52:39 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Trabalho_1                                  ;
+; Top-level Entity Name           ; board                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 31                                          ;
+; Total pins                      ; 33                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; board              ; Trabalho_1         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+; adderSubtractor.vhd              ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd      ;         ;
+; binary_to_7_seg.vhd              ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd      ;         ;
+; alu.vhd                          ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/alu.vhd                  ;         ;
+; interface.vhd                    ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/interface.vhd            ;         ;
+; counter.vhd                      ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/counter.vhd              ;         ;
+; interfaceWithCounter.vhd         ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd ;         ;
+; board.vhd                        ; yes             ; User VHDL File  ; /home/calindra/Documentos/Trabalho_1/board.vhd                ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                    ;
++---------------------------------------------+------------------------------------------------------------------+
+; Resource                                    ; Usage                                                            ;
++---------------------------------------------+------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 52                                                               ;
+;                                             ;                                                                  ;
+; Combinational ALUT usage for logic          ; 84                                                               ;
+;     -- 7 input functions                    ; 2                                                                ;
+;     -- 6 input functions                    ; 17                                                               ;
+;     -- 5 input functions                    ; 4                                                                ;
+;     -- 4 input functions                    ; 24                                                               ;
+;     -- <=3 input functions                  ; 37                                                               ;
+;                                             ;                                                                  ;
+; Dedicated logic registers                   ; 31                                                               ;
+;                                             ;                                                                  ;
+; I/O pins                                    ; 33                                                               ;
+;                                             ;                                                                  ;
+; Total DSP Blocks                            ; 0                                                                ;
+;                                             ;                                                                  ;
+; Maximum fan-out node                        ; interfaceWithCounter:conection|counter:counterOperation|Equal0~5 ;
+; Maximum fan-out                             ; 31                                                               ;
+; Total fan-out                               ; 461                                                              ;
+; Average fan-out                             ; 2.55                                                             ;
++---------------------------------------------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name          ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |board                                   ; 84 (0)              ; 31 (0)                    ; 0                 ; 0          ; 33   ; 0            ; |board                                                                                                                              ; board                ; work         ;
+;    |interfaceWithCounter:conection|      ; 84 (0)              ; 31 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection                                                                                               ; interfaceWithCounter ; work         ;
+;       |counter:counterOperation|         ; 35 (35)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|counter:counterOperation                                                                      ; counter              ; work         ;
+;       |interface:interfaceOperation|     ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation                                                                  ; interface            ; work         ;
+;          |alu:aluOperation|              ; 27 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation                                                 ; alu                  ; work         ;
+;             |adderSubtractor:adder|      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder                           ; adderSubtractor      ; work         ;
+;                |fullAdder:fullAdder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder|fullAdder:fullAdder2      ; fullAdder            ; work         ;
+;             |adderSubtractor:decrement|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement                       ; adderSubtractor      ; work         ;
+;                |fullAdder:fullAdder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement|fullAdder:fullAdder2  ; fullAdder            ; work         ;
+;             |adderSubtractor:increment|  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment                       ; adderSubtractor      ; work         ;
+;                |fullAdder:fullAdder2|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment|fullAdder:fullAdder2  ; fullAdder            ; work         ;
+;                |fullAdder:fullAdder3|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment|fullAdder:fullAdder3  ; fullAdder            ; work         ;
+;             |adderSubtractor:subtractor| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor                      ; adderSubtractor      ; work         ;
+;                |fullAdder:fullAdder2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor|fullAdder:fullAdder2 ; fullAdder            ; work         ;
+;          |binaryTo7SegHex:first7Seg|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:first7Seg                                        ; binaryTo7SegHex      ; work         ;
+;          |binaryTo7SegHex:second7Seg|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:second7Seg                                       ; binaryTo7SegHex      ; work         ;
+;          |binaryTo7SegHex:sum7Seg|       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |board|interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:sum7Seg                                          ; binaryTo7SegHex      ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 31    ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|Mux5 ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement" ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                               ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; sub     ; Input ; Info     ; Stuck at VCC                                                                                          ;
+; b[3..1] ; Input ; Info     ; Stuck at GND                                                                                          ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                                                                                          ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment" ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                               ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------+
+; sub     ; Input ; Info     ; Stuck at GND                                                                                          ;
+; b[3..1] ; Input ; Info     ; Stuck at GND                                                                                          ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                                                                                          ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor" ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                   ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------+
+; sub  ; Input ; Info     ; Stuck at VCC                                                                                              ;
++------+-------+----------+-----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; sub  ; Input ; Info     ; Stuck at GND                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceWithCounter:conection" ;
++-------+-------+----------+---------------------------------+
+; Port  ; Type  ; Severity ; Details                         ;
++-------+-------+----------+---------------------------------+
+; load  ; Input ; Info     ; Stuck at GND                    ;
+; reset ; Input ; Info     ; Stuck at GND                    ;
++-------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 31                          ;
+;     ENA               ; 4                           ;
+;     SCLR              ; 27                          ;
+; arriav_lcell_comb     ; 85                          ;
+;     arith             ; 27                          ;
+;         1 data inputs ; 27                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 56                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 17                          ;
+; boundary_port         ; 33                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.72                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Aug 20 09:52:31 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Trabalho_1 -c Trabalho_1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 4 design units, including 2 entities, in source file adderSubtractor.vhd
+    Info (12022): Found design unit 1: fullAdder-behavior File: /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd Line: 12
+    Info (12022): Found design unit 2: adderSubtractor-struct File: /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd Line: 36
+    Info (12023): Found entity 1: fullAdder File: /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd Line: 5
+    Info (12023): Found entity 2: adderSubtractor File: /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file binary_to_7_seg.vhd
+    Info (12022): Found design unit 1: binaryTo7SegHex-Behavioral File: /home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd Line: 11
+    Info (12023): Found entity 1: binaryTo7SegHex File: /home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file test_bin_to_7_seg.vhd
+    Info (12022): Found design unit 1: bin7SegTest-Behavior File: /home/calindra/Documentos/Trabalho_1/test_bin_to_7_seg.vhd Line: 8
+    Info (12023): Found entity 1: bin7SegTest File: /home/calindra/Documentos/Trabalho_1/test_bin_to_7_seg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file testAdderSubtractor.vhd
+    Info (12022): Found design unit 1: adderSubtractorTest-Behavior File: /home/calindra/Documentos/Trabalho_1/testAdderSubtractor.vhd Line: 7
+    Info (12023): Found entity 1: adderSubtractorTest File: /home/calindra/Documentos/Trabalho_1/testAdderSubtractor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-struct File: /home/calindra/Documentos/Trabalho_1/alu.vhd Line: 13
+    Info (12023): Found entity 1: alu File: /home/calindra/Documentos/Trabalho_1/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file aluTest.vhd
+    Info (12022): Found design unit 1: aluTest-Behavior File: /home/calindra/Documentos/Trabalho_1/aluTest.vhd Line: 7
+    Info (12023): Found entity 1: aluTest File: /home/calindra/Documentos/Trabalho_1/aluTest.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interface.vhd
+    Info (12022): Found design unit 1: interface-struct File: /home/calindra/Documentos/Trabalho_1/interface.vhd Line: 13
+    Info (12023): Found entity 1: interface File: /home/calindra/Documentos/Trabalho_1/interface.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceTest.vhd
+    Info (12022): Found design unit 1: interfaceTest-Behavior File: /home/calindra/Documentos/Trabalho_1/interfaceTest.vhd Line: 8
+    Info (12023): Found entity 1: interfaceTest File: /home/calindra/Documentos/Trabalho_1/interfaceTest.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+    Info (12022): Found design unit 1: counter-struct File: /home/calindra/Documentos/Trabalho_1/counter.vhd Line: 50
+    Info (12023): Found entity 1: counter File: /home/calindra/Documentos/Trabalho_1/counter.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file counterTest.vhd
+    Info (12022): Found design unit 1: counterTest-Behavior File: /home/calindra/Documentos/Trabalho_1/counterTest.vhd Line: 7
+    Info (12023): Found entity 1: counterTest File: /home/calindra/Documentos/Trabalho_1/counterTest.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceWithCounter.vhd
+    Info (12022): Found design unit 1: interfaceWithCounter-struct File: /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd Line: 13
+    Info (12023): Found entity 1: interfaceWithCounter File: /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceWithCounterTest.vhd
+    Info (12022): Found design unit 1: interfaceWithCounterTest-Behavior File: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd Line: 8
+    Info (12023): Found entity 1: interfaceWithCounterTest File: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file board.vhd
+    Info (12022): Found design unit 1: board-struct File: /home/calindra/Documentos/Trabalho_1/board.vhd Line: 15
+    Info (12023): Found entity 1: board File: /home/calindra/Documentos/Trabalho_1/board.vhd Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file newCounter.vhd
+Info (12127): Elaborating entity "board" for the top level hierarchy
+Info (12128): Elaborating entity "interfaceWithCounter" for hierarchy "interfaceWithCounter:conection" File: /home/calindra/Documentos/Trabalho_1/board.vhd Line: 26
+Info (12128): Elaborating entity "counter" for hierarchy "interfaceWithCounter:conection|counter:counterOperation" File: /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd Line: 50
+Info (12128): Elaborating entity "interface" for hierarchy "interfaceWithCounter:conection|interface:interfaceOperation" File: /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd Line: 56
+Info (12128): Elaborating entity "alu" for hierarchy "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation" File: /home/calindra/Documentos/Trabalho_1/interface.vhd Line: 34
+Info (12128): Elaborating entity "adderSubtractor" for hierarchy "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder" File: /home/calindra/Documentos/Trabalho_1/alu.vhd Line: 27
+Info (12128): Elaborating entity "fullAdder" for hierarchy "interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder|fullAdder:fullAdder0" File: /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd Line: 53
+Info (12128): Elaborating entity "binaryTo7SegHex" for hierarchy "interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:first7Seg" File: /home/calindra/Documentos/Trabalho_1/interface.vhd Line: 50
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 84 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Fri Aug 20 09:52:39 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
+
+

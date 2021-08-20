@@ -1,0 +1,34 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY newCounter IS 
+	PORT (
+		clock, reset, output: IN STD_LOGIC;
+	);
+END  newCounter;
+
+ARCHITECTURE struct OF newCounter IS
+	SIGNAL outputAux: STD_LOGIC :='0';
+	SIGNAL counter: INTEGER RANGE 0 TO 49999999:=0;
+
+ 
+BEGIN 
+	PROCESS(clock, reset)
+	variable outputAux: STD_LOGIC_VECTOR(3 DOWNTO 0);
+	BEGIN 
+		IF (reset = '1') THEN 
+			outputAux <= '0';
+			counter <= 0;
+		ELSIF (clock'EVENT AND clock = '1') THEN 
+			IF (counter := 49999999) THEN
+				counter <= 0;
+				outputAux <= NOT outputAux;
+			ELSE 
+				counter <= counter + 1;
+			END IF;
+		END IF;
+	END PROCESS;
+	
+	output <= outputAux;
+END struct;

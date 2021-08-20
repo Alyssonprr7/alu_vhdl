@@ -1,0 +1,16 @@
+ENTITY counterTest IS 
+END counterTest;
+
+ARCHITECTURE Behavior OF counter IS 
+	COMPONENT counter 
+		PORT (
+			clock, load, reset: IN bit;
+			inputData: IN INTEGER RANGE 15 DOWNTO 0;
+			outputData: OUT  INTEGER RANGE 15 DOWNTO 0
+		);
+	END COMPONENT;
+
+	SIGNAL input, output: STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL selector : STD_LOGIC_VECTOR(2 DOWNTO 0);
+	SIGNAL cout, overflow: STD_LOGIC;
+

@@ -1,0 +1,755 @@
+|board
+CLOCK_50 => interfaceWithCounter:conection.clock
+SW[0] => interfaceWithCounter:conection.selector[0]
+SW[1] => interfaceWithCounter:conection.selector[1]
+SW[2] => interfaceWithCounter:conection.selector[2]
+V_SW[14] => interfaceWithCounter:conection.b[0]
+V_SW[15] => interfaceWithCounter:conection.b[1]
+V_SW[16] => interfaceWithCounter:conection.b[2]
+V_SW[17] => interfaceWithCounter:conection.b[3]
+G_HEX7[0] <= interfaceWithCounter:conection.a7Seg[0]
+G_HEX7[1] <= interfaceWithCounter:conection.a7Seg[1]
+G_HEX7[2] <= interfaceWithCounter:conection.a7Seg[2]
+G_HEX7[3] <= interfaceWithCounter:conection.a7Seg[3]
+G_HEX7[4] <= interfaceWithCounter:conection.a7Seg[4]
+G_HEX7[5] <= interfaceWithCounter:conection.a7Seg[5]
+G_HEX7[6] <= interfaceWithCounter:conection.a7Seg[6]
+G_HEX6[0] <= interfaceWithCounter:conection.b7Seg[0]
+G_HEX6[1] <= interfaceWithCounter:conection.b7Seg[1]
+G_HEX6[2] <= interfaceWithCounter:conection.b7Seg[2]
+G_HEX6[3] <= interfaceWithCounter:conection.b7Seg[3]
+G_HEX6[4] <= interfaceWithCounter:conection.b7Seg[4]
+G_HEX6[5] <= interfaceWithCounter:conection.b7Seg[5]
+G_HEX6[6] <= interfaceWithCounter:conection.b7Seg[6]
+G_HEX5[0] <= interfaceWithCounter:conection.result7Seg[0]
+G_HEX5[1] <= interfaceWithCounter:conection.result7Seg[1]
+G_HEX5[2] <= interfaceWithCounter:conection.result7Seg[2]
+G_HEX5[3] <= interfaceWithCounter:conection.result7Seg[3]
+G_HEX5[4] <= interfaceWithCounter:conection.result7Seg[4]
+G_HEX5[5] <= interfaceWithCounter:conection.result7Seg[5]
+G_HEX5[6] <= interfaceWithCounter:conection.result7Seg[6]
+G_LEDR[0] <= interfaceWithCounter:conection.negative
+G_LEDR[1] <= interfaceWithCounter:conection.zero
+G_LEDR[2] <= interfaceWithCounter:conection.overflow
+G_LEDR[3] <= interfaceWithCounter:conection.cout
+
+
+|board|interfaceWithCounter:conection
+b[0] => interface:interfaceOperation.b[0]
+b[1] => interface:interfaceOperation.b[1]
+b[2] => interface:interfaceOperation.b[2]
+b[3] => interface:interfaceOperation.b[3]
+selector[0] => interface:interfaceOperation.selector[0]
+selector[1] => interface:interfaceOperation.selector[1]
+selector[2] => interface:interfaceOperation.selector[2]
+clock => counter:counterOperation.clock
+load => ~NO_FANOUT~
+reset => counter:counterOperation.reset
+cout <= interface:interfaceOperation.cout
+overflow <= interface:interfaceOperation.overflow
+zero <= interface:interfaceOperation.zero
+negative <= interface:interfaceOperation.negative
+a7Seg[0] <= interface:interfaceOperation.a7Seg[0]
+a7Seg[1] <= interface:interfaceOperation.a7Seg[1]
+a7Seg[2] <= interface:interfaceOperation.a7Seg[2]
+a7Seg[3] <= interface:interfaceOperation.a7Seg[3]
+a7Seg[4] <= interface:interfaceOperation.a7Seg[4]
+a7Seg[5] <= interface:interfaceOperation.a7Seg[5]
+a7Seg[6] <= interface:interfaceOperation.a7Seg[6]
+b7Seg[0] <= interface:interfaceOperation.b7Seg[0]
+b7Seg[1] <= interface:interfaceOperation.b7Seg[1]
+b7Seg[2] <= interface:interfaceOperation.b7Seg[2]
+b7Seg[3] <= interface:interfaceOperation.b7Seg[3]
+b7Seg[4] <= interface:interfaceOperation.b7Seg[4]
+b7Seg[5] <= interface:interfaceOperation.b7Seg[5]
+b7Seg[6] <= interface:interfaceOperation.b7Seg[6]
+result7Seg[0] <= interface:interfaceOperation.result7Seg[0]
+result7Seg[1] <= interface:interfaceOperation.result7Seg[1]
+result7Seg[2] <= interface:interfaceOperation.result7Seg[2]
+result7Seg[3] <= interface:interfaceOperation.result7Seg[3]
+result7Seg[4] <= interface:interfaceOperation.result7Seg[4]
+result7Seg[5] <= interface:interfaceOperation.result7Seg[5]
+result7Seg[6] <= interface:interfaceOperation.result7Seg[6]
+
+
+|board|interfaceWithCounter:conection|counter:counterOperation
+clock => insideCounter[0].CLK
+clock => insideCounter[1].CLK
+clock => insideCounter[2].CLK
+clock => insideCounter[3].CLK
+clock => insideCounter[4].CLK
+clock => insideCounter[5].CLK
+clock => insideCounter[6].CLK
+clock => insideCounter[7].CLK
+clock => insideCounter[8].CLK
+clock => insideCounter[9].CLK
+clock => insideCounter[10].CLK
+clock => insideCounter[11].CLK
+clock => insideCounter[12].CLK
+clock => insideCounter[13].CLK
+clock => insideCounter[14].CLK
+clock => insideCounter[15].CLK
+clock => insideCounter[16].CLK
+clock => insideCounter[17].CLK
+clock => insideCounter[18].CLK
+clock => insideCounter[19].CLK
+clock => insideCounter[20].CLK
+clock => insideCounter[21].CLK
+clock => insideCounter[22].CLK
+clock => insideCounter[23].CLK
+clock => insideCounter[24].CLK
+clock => insideCounter[25].CLK
+clock => insideCounter[26].CLK
+clock => outputAux[0].CLK
+clock => outputAux[1].CLK
+clock => outputAux[2].CLK
+clock => outputAux[3].CLK
+reset => insideCounter[0].ACLR
+reset => insideCounter[1].ACLR
+reset => insideCounter[2].ACLR
+reset => insideCounter[3].ACLR
+reset => insideCounter[4].ACLR
+reset => insideCounter[5].ACLR
+reset => insideCounter[6].ACLR
+reset => insideCounter[7].ACLR
+reset => insideCounter[8].ACLR
+reset => insideCounter[9].ACLR
+reset => insideCounter[10].ACLR
+reset => insideCounter[11].ACLR
+reset => insideCounter[12].ACLR
+reset => insideCounter[13].ACLR
+reset => insideCounter[14].ACLR
+reset => insideCounter[15].ACLR
+reset => insideCounter[16].ACLR
+reset => insideCounter[17].ACLR
+reset => insideCounter[18].ACLR
+reset => insideCounter[19].ACLR
+reset => insideCounter[20].ACLR
+reset => insideCounter[21].ACLR
+reset => insideCounter[22].ACLR
+reset => insideCounter[23].ACLR
+reset => insideCounter[24].ACLR
+reset => insideCounter[25].ACLR
+reset => insideCounter[26].ACLR
+reset => outputAux[0].ACLR
+reset => outputAux[1].ACLR
+reset => outputAux[2].ACLR
+reset => outputAux[3].ACLR
+outputData[0] <= outputAux[0].DB_MAX_OUTPUT_PORT_TYPE
+outputData[1] <= outputAux[1].DB_MAX_OUTPUT_PORT_TYPE
+outputData[2] <= outputAux[2].DB_MAX_OUTPUT_PORT_TYPE
+outputData[3] <= outputAux[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation
+a[0] => alu:aluOperation.a[0]
+a[0] => binaryTo7SegHex:first7Seg.binary[0]
+a[1] => alu:aluOperation.a[1]
+a[1] => binaryTo7SegHex:first7Seg.binary[1]
+a[2] => alu:aluOperation.a[2]
+a[2] => binaryTo7SegHex:first7Seg.binary[2]
+a[3] => alu:aluOperation.a[3]
+a[3] => binaryTo7SegHex:first7Seg.binary[3]
+b[0] => alu:aluOperation.b[0]
+b[0] => binaryTo7SegHex:second7Seg.binary[0]
+b[1] => alu:aluOperation.b[1]
+b[1] => binaryTo7SegHex:second7Seg.binary[1]
+b[2] => alu:aluOperation.b[2]
+b[2] => binaryTo7SegHex:second7Seg.binary[2]
+b[3] => alu:aluOperation.b[3]
+b[3] => binaryTo7SegHex:second7Seg.binary[3]
+selector[0] => alu:aluOperation.selector[0]
+selector[1] => alu:aluOperation.selector[1]
+selector[2] => alu:aluOperation.selector[2]
+cout <= alu:aluOperation.cout
+overflow <= alu:aluOperation.overflow
+zero <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+negative <= alu:aluOperation.result[3]
+a7Seg[0] <= binaryTo7SegHex:first7Seg.in7Seg[0]
+a7Seg[1] <= binaryTo7SegHex:first7Seg.in7Seg[1]
+a7Seg[2] <= binaryTo7SegHex:first7Seg.in7Seg[2]
+a7Seg[3] <= binaryTo7SegHex:first7Seg.in7Seg[3]
+a7Seg[4] <= binaryTo7SegHex:first7Seg.in7Seg[4]
+a7Seg[5] <= binaryTo7SegHex:first7Seg.in7Seg[5]
+a7Seg[6] <= binaryTo7SegHex:first7Seg.in7Seg[6]
+b7Seg[0] <= binaryTo7SegHex:second7Seg.in7Seg[0]
+b7Seg[1] <= binaryTo7SegHex:second7Seg.in7Seg[1]
+b7Seg[2] <= binaryTo7SegHex:second7Seg.in7Seg[2]
+b7Seg[3] <= binaryTo7SegHex:second7Seg.in7Seg[3]
+b7Seg[4] <= binaryTo7SegHex:second7Seg.in7Seg[4]
+b7Seg[5] <= binaryTo7SegHex:second7Seg.in7Seg[5]
+b7Seg[6] <= binaryTo7SegHex:second7Seg.in7Seg[6]
+result7Seg[0] <= binaryTo7SegHex:sum7Seg.in7Seg[0]
+result7Seg[1] <= binaryTo7SegHex:sum7Seg.in7Seg[1]
+result7Seg[2] <= binaryTo7SegHex:sum7Seg.in7Seg[2]
+result7Seg[3] <= binaryTo7SegHex:sum7Seg.in7Seg[3]
+result7Seg[4] <= binaryTo7SegHex:sum7Seg.in7Seg[4]
+result7Seg[5] <= binaryTo7SegHex:sum7Seg.in7Seg[5]
+result7Seg[6] <= binaryTo7SegHex:sum7Seg.in7Seg[6]
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation
+a[0] => result.IN0
+a[0] => result.IN0
+a[0] => result.IN0
+a[0] => adderSubtractor:adder.a[0]
+a[0] => adderSubtractor:subtractor.a[0]
+a[0] => adderSubtractor:increment.a[0]
+a[0] => adderSubtractor:decrement.a[0]
+a[0] => Mux3.IN3
+a[1] => result.IN0
+a[1] => result.IN0
+a[1] => result.IN0
+a[1] => adderSubtractor:adder.a[1]
+a[1] => adderSubtractor:subtractor.a[1]
+a[1] => adderSubtractor:increment.a[1]
+a[1] => adderSubtractor:decrement.a[1]
+a[1] => Mux2.IN3
+a[2] => result.IN0
+a[2] => result.IN0
+a[2] => result.IN0
+a[2] => adderSubtractor:adder.a[2]
+a[2] => adderSubtractor:subtractor.a[2]
+a[2] => adderSubtractor:increment.a[2]
+a[2] => adderSubtractor:decrement.a[2]
+a[2] => Mux1.IN3
+a[3] => result.IN0
+a[3] => result.IN0
+a[3] => result.IN0
+a[3] => adderSubtractor:adder.a[3]
+a[3] => adderSubtractor:subtractor.a[3]
+a[3] => adderSubtractor:increment.a[3]
+a[3] => adderSubtractor:decrement.a[3]
+a[3] => Mux0.IN3
+b[0] => result.IN1
+b[0] => result.IN1
+b[0] => result.IN1
+b[0] => adderSubtractor:adder.b[0]
+b[0] => adderSubtractor:subtractor.b[0]
+b[1] => result.IN1
+b[1] => result.IN1
+b[1] => result.IN1
+b[1] => adderSubtractor:adder.b[1]
+b[1] => adderSubtractor:subtractor.b[1]
+b[2] => result.IN1
+b[2] => result.IN1
+b[2] => result.IN1
+b[2] => adderSubtractor:adder.b[2]
+b[2] => adderSubtractor:subtractor.b[2]
+b[3] => result.IN1
+b[3] => result.IN1
+b[3] => result.IN1
+b[3] => adderSubtractor:adder.b[3]
+b[3] => adderSubtractor:subtractor.b[3]
+selector[0] => Mux0.IN6
+selector[0] => Mux1.IN6
+selector[0] => Mux2.IN6
+selector[0] => Mux3.IN6
+selector[0] => Mux4.IN6
+selector[0] => Mux5.IN6
+selector[1] => Mux0.IN5
+selector[1] => Mux1.IN5
+selector[1] => Mux2.IN5
+selector[1] => Mux3.IN5
+selector[1] => Mux4.IN5
+selector[1] => Mux5.IN5
+selector[2] => Mux0.IN4
+selector[2] => Mux1.IN4
+selector[2] => Mux2.IN4
+selector[2] => Mux3.IN4
+selector[2] => Mux4.IN4
+selector[2] => Mux5.IN4
+cout <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder
+sub => subXorB[0].IN0
+sub => subXorB[1].IN0
+sub => subXorB[2].IN0
+sub => subXorB[3].IN0
+sub => fullAdder:fullAdder0.cin
+a[0] => fullAdder:fullAdder0.x
+a[1] => fullAdder:fullAdder1.x
+a[2] => fullAdder:fullAdder2.x
+a[3] => fullAdder:fullAdder3.x
+b[0] => subXorB[0].IN1
+b[1] => subXorB[1].IN1
+b[2] => subXorB[2].IN1
+b[3] => subXorB[3].IN1
+result[0] <= fullAdder:fullAdder0.sum
+result[1] <= fullAdder:fullAdder1.sum
+result[2] <= fullAdder:fullAdder2.sum
+result[3] <= fullAdder:fullAdder3.sum
+cout <= fullAdder:fullAdder3.cout
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder|fullAdder:fullAdder0
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder|fullAdder:fullAdder1
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder|fullAdder:fullAdder2
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:adder|fullAdder:fullAdder3
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor
+sub => subXorB[0].IN0
+sub => subXorB[1].IN0
+sub => subXorB[2].IN0
+sub => subXorB[3].IN0
+sub => fullAdder:fullAdder0.cin
+a[0] => fullAdder:fullAdder0.x
+a[1] => fullAdder:fullAdder1.x
+a[2] => fullAdder:fullAdder2.x
+a[3] => fullAdder:fullAdder3.x
+b[0] => subXorB[0].IN1
+b[1] => subXorB[1].IN1
+b[2] => subXorB[2].IN1
+b[3] => subXorB[3].IN1
+result[0] <= fullAdder:fullAdder0.sum
+result[1] <= fullAdder:fullAdder1.sum
+result[2] <= fullAdder:fullAdder2.sum
+result[3] <= fullAdder:fullAdder3.sum
+cout <= fullAdder:fullAdder3.cout
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor|fullAdder:fullAdder0
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor|fullAdder:fullAdder1
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor|fullAdder:fullAdder2
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:subtractor|fullAdder:fullAdder3
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment
+sub => subXorB[0].IN0
+sub => subXorB[1].IN0
+sub => subXorB[2].IN0
+sub => subXorB[3].IN0
+sub => fullAdder:fullAdder0.cin
+a[0] => fullAdder:fullAdder0.x
+a[1] => fullAdder:fullAdder1.x
+a[2] => fullAdder:fullAdder2.x
+a[3] => fullAdder:fullAdder3.x
+b[0] => subXorB[0].IN1
+b[1] => subXorB[1].IN1
+b[2] => subXorB[2].IN1
+b[3] => subXorB[3].IN1
+result[0] <= fullAdder:fullAdder0.sum
+result[1] <= fullAdder:fullAdder1.sum
+result[2] <= fullAdder:fullAdder2.sum
+result[3] <= fullAdder:fullAdder3.sum
+cout <= fullAdder:fullAdder3.cout
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment|fullAdder:fullAdder0
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment|fullAdder:fullAdder1
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment|fullAdder:fullAdder2
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:increment|fullAdder:fullAdder3
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement
+sub => subXorB[0].IN0
+sub => subXorB[1].IN0
+sub => subXorB[2].IN0
+sub => subXorB[3].IN0
+sub => fullAdder:fullAdder0.cin
+a[0] => fullAdder:fullAdder0.x
+a[1] => fullAdder:fullAdder1.x
+a[2] => fullAdder:fullAdder2.x
+a[3] => fullAdder:fullAdder3.x
+b[0] => subXorB[0].IN1
+b[1] => subXorB[1].IN1
+b[2] => subXorB[2].IN1
+b[3] => subXorB[3].IN1
+result[0] <= fullAdder:fullAdder0.sum
+result[1] <= fullAdder:fullAdder1.sum
+result[2] <= fullAdder:fullAdder2.sum
+result[3] <= fullAdder:fullAdder3.sum
+cout <= fullAdder:fullAdder3.cout
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement|fullAdder:fullAdder0
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement|fullAdder:fullAdder1
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement|fullAdder:fullAdder2
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|alu:aluOperation|adderSubtractor:decrement|fullAdder:fullAdder3
+x => sum.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:first7Seg
+binary[0] => Equal0.IN3
+binary[0] => Equal1.IN3
+binary[0] => Equal2.IN2
+binary[0] => Equal3.IN3
+binary[0] => Equal4.IN2
+binary[0] => Equal5.IN3
+binary[0] => Equal6.IN1
+binary[0] => Equal7.IN3
+binary[0] => Equal8.IN2
+binary[0] => Equal9.IN3
+binary[0] => Equal10.IN1
+binary[0] => Equal11.IN3
+binary[0] => Equal12.IN1
+binary[0] => Equal13.IN3
+binary[0] => Equal14.IN0
+binary[0] => Equal15.IN3
+binary[1] => Equal0.IN2
+binary[1] => Equal1.IN2
+binary[1] => Equal2.IN3
+binary[1] => Equal3.IN2
+binary[1] => Equal4.IN1
+binary[1] => Equal5.IN1
+binary[1] => Equal6.IN3
+binary[1] => Equal7.IN2
+binary[1] => Equal8.IN1
+binary[1] => Equal9.IN1
+binary[1] => Equal10.IN3
+binary[1] => Equal11.IN2
+binary[1] => Equal12.IN0
+binary[1] => Equal13.IN0
+binary[1] => Equal14.IN3
+binary[1] => Equal15.IN2
+binary[2] => Equal0.IN1
+binary[2] => Equal1.IN1
+binary[2] => Equal2.IN1
+binary[2] => Equal3.IN1
+binary[2] => Equal4.IN3
+binary[2] => Equal5.IN2
+binary[2] => Equal6.IN2
+binary[2] => Equal7.IN1
+binary[2] => Equal8.IN0
+binary[2] => Equal9.IN0
+binary[2] => Equal10.IN0
+binary[2] => Equal11.IN0
+binary[2] => Equal12.IN3
+binary[2] => Equal13.IN2
+binary[2] => Equal14.IN2
+binary[2] => Equal15.IN1
+binary[3] => Equal0.IN0
+binary[3] => Equal1.IN0
+binary[3] => Equal2.IN0
+binary[3] => Equal3.IN0
+binary[3] => Equal4.IN0
+binary[3] => Equal5.IN0
+binary[3] => Equal6.IN0
+binary[3] => Equal7.IN0
+binary[3] => Equal8.IN3
+binary[3] => Equal9.IN2
+binary[3] => Equal10.IN2
+binary[3] => Equal11.IN1
+binary[3] => Equal12.IN2
+binary[3] => Equal13.IN1
+binary[3] => Equal14.IN1
+binary[3] => Equal15.IN0
+in7Seg[0] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[1] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[2] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[3] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[4] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[5] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[6] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:second7Seg
+binary[0] => Equal0.IN3
+binary[0] => Equal1.IN3
+binary[0] => Equal2.IN2
+binary[0] => Equal3.IN3
+binary[0] => Equal4.IN2
+binary[0] => Equal5.IN3
+binary[0] => Equal6.IN1
+binary[0] => Equal7.IN3
+binary[0] => Equal8.IN2
+binary[0] => Equal9.IN3
+binary[0] => Equal10.IN1
+binary[0] => Equal11.IN3
+binary[0] => Equal12.IN1
+binary[0] => Equal13.IN3
+binary[0] => Equal14.IN0
+binary[0] => Equal15.IN3
+binary[1] => Equal0.IN2
+binary[1] => Equal1.IN2
+binary[1] => Equal2.IN3
+binary[1] => Equal3.IN2
+binary[1] => Equal4.IN1
+binary[1] => Equal5.IN1
+binary[1] => Equal6.IN3
+binary[1] => Equal7.IN2
+binary[1] => Equal8.IN1
+binary[1] => Equal9.IN1
+binary[1] => Equal10.IN3
+binary[1] => Equal11.IN2
+binary[1] => Equal12.IN0
+binary[1] => Equal13.IN0
+binary[1] => Equal14.IN3
+binary[1] => Equal15.IN2
+binary[2] => Equal0.IN1
+binary[2] => Equal1.IN1
+binary[2] => Equal2.IN1
+binary[2] => Equal3.IN1
+binary[2] => Equal4.IN3
+binary[2] => Equal5.IN2
+binary[2] => Equal6.IN2
+binary[2] => Equal7.IN1
+binary[2] => Equal8.IN0
+binary[2] => Equal9.IN0
+binary[2] => Equal10.IN0
+binary[2] => Equal11.IN0
+binary[2] => Equal12.IN3
+binary[2] => Equal13.IN2
+binary[2] => Equal14.IN2
+binary[2] => Equal15.IN1
+binary[3] => Equal0.IN0
+binary[3] => Equal1.IN0
+binary[3] => Equal2.IN0
+binary[3] => Equal3.IN0
+binary[3] => Equal4.IN0
+binary[3] => Equal5.IN0
+binary[3] => Equal6.IN0
+binary[3] => Equal7.IN0
+binary[3] => Equal8.IN3
+binary[3] => Equal9.IN2
+binary[3] => Equal10.IN2
+binary[3] => Equal11.IN1
+binary[3] => Equal12.IN2
+binary[3] => Equal13.IN1
+binary[3] => Equal14.IN1
+binary[3] => Equal15.IN0
+in7Seg[0] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[1] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[2] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[3] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[4] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[5] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[6] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|board|interfaceWithCounter:conection|interface:interfaceOperation|binaryTo7SegHex:sum7Seg
+binary[0] => Equal0.IN3
+binary[0] => Equal1.IN3
+binary[0] => Equal2.IN2
+binary[0] => Equal3.IN3
+binary[0] => Equal4.IN2
+binary[0] => Equal5.IN3
+binary[0] => Equal6.IN1
+binary[0] => Equal7.IN3
+binary[0] => Equal8.IN2
+binary[0] => Equal9.IN3
+binary[0] => Equal10.IN1
+binary[0] => Equal11.IN3
+binary[0] => Equal12.IN1
+binary[0] => Equal13.IN3
+binary[0] => Equal14.IN0
+binary[0] => Equal15.IN3
+binary[1] => Equal0.IN2
+binary[1] => Equal1.IN2
+binary[1] => Equal2.IN3
+binary[1] => Equal3.IN2
+binary[1] => Equal4.IN1
+binary[1] => Equal5.IN1
+binary[1] => Equal6.IN3
+binary[1] => Equal7.IN2
+binary[1] => Equal8.IN1
+binary[1] => Equal9.IN1
+binary[1] => Equal10.IN3
+binary[1] => Equal11.IN2
+binary[1] => Equal12.IN0
+binary[1] => Equal13.IN0
+binary[1] => Equal14.IN3
+binary[1] => Equal15.IN2
+binary[2] => Equal0.IN1
+binary[2] => Equal1.IN1
+binary[2] => Equal2.IN1
+binary[2] => Equal3.IN1
+binary[2] => Equal4.IN3
+binary[2] => Equal5.IN2
+binary[2] => Equal6.IN2
+binary[2] => Equal7.IN1
+binary[2] => Equal8.IN0
+binary[2] => Equal9.IN0
+binary[2] => Equal10.IN0
+binary[2] => Equal11.IN0
+binary[2] => Equal12.IN3
+binary[2] => Equal13.IN2
+binary[2] => Equal14.IN2
+binary[2] => Equal15.IN1
+binary[3] => Equal0.IN0
+binary[3] => Equal1.IN0
+binary[3] => Equal2.IN0
+binary[3] => Equal3.IN0
+binary[3] => Equal4.IN0
+binary[3] => Equal5.IN0
+binary[3] => Equal6.IN0
+binary[3] => Equal7.IN0
+binary[3] => Equal8.IN3
+binary[3] => Equal9.IN2
+binary[3] => Equal10.IN2
+binary[3] => Equal11.IN1
+binary[3] => Equal12.IN2
+binary[3] => Equal13.IN1
+binary[3] => Equal14.IN1
+binary[3] => Equal15.IN0
+in7Seg[0] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[1] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[2] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[3] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[4] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[5] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+in7Seg[6] <= in7Seg.DB_MAX_OUTPUT_PORT_TYPE
+
+

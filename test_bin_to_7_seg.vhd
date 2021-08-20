@@ -1,0 +1,33 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+ENTITY bin7SegTest IS 
+END bin7SegTest;
+
+ARCHITECTURE Behavior OF bin7SegTest IS 
+	COMPONENT binaryTo7SegHex
+	PORT (
+		binary: IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+		in7Seg: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+	);
+	END COMPONENT;
+	
+	SIGNAL binary: STD_LOGIC_VECTOR (3 DOWNTO 0) := (OTHERS  => '0');
+	SIGNAL in7Seg: STD_LOGIC_VECTOR (6 DOWNTO 0);
+
+BEGIN 
+	uut: binaryTo7SegHex PORT MAP (
+		binary => binary,
+		in7Seg => in7Seg	
+	);
+	
+	stim_proc: PROCESS
+	BEGIN 
+			FOR i IN 0 TO 15 LOOP 
+				binary <= CONV_STD_LOGIC_VECTOR(i,4);
+				WAIT FOR 50 ns;
+			END LOOP;
+		WAIT;
+	END PROCESS; 
+END;

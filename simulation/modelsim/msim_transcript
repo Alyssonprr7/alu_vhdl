@@ -1,0 +1,149 @@
+# do Trabalho_1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /mnt/08e0e36e-8b56-4f13-a54a-68c5c4dd64bc/Programs/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:39 on Aug 18,2021
+# vcom -reportprogress 300 -93 -work work /home/calindra/Documentos/Trabalho_1/adderSubtractor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fullAdder
+# -- Compiling architecture behavior of fullAdder
+# -- Compiling entity adderSubtractor
+# -- Compiling architecture struct of adderSubtractor
+# End time: 15:19:39 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:39 on Aug 18,2021
+# vcom -reportprogress 300 -93 -work work /home/calindra/Documentos/Trabalho_1/binary_to_7_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity binaryTo7SegHex
+# -- Compiling architecture Behavioral of binaryTo7SegHex
+# End time: 15:19:39 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/calindra/Documentos/Trabalho_1/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:39 on Aug 18,2021
+# vcom -reportprogress 300 -93 -work work /home/calindra/Documentos/Trabalho_1/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu
+# -- Compiling architecture struct of alu
+# End time: 15:19:39 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/calindra/Documentos/Trabalho_1/interface.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:39 on Aug 18,2021
+# vcom -reportprogress 300 -93 -work work /home/calindra/Documentos/Trabalho_1/interface.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity interface
+# -- Compiling architecture struct of interface
+# End time: 15:19:39 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/calindra/Documentos/Trabalho_1/counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:39 on Aug 18,2021
+# vcom -reportprogress 300 -93 -work work /home/calindra/Documentos/Trabalho_1/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity counter
+# -- Compiling architecture struct of counter
+# End time: 15:19:40 on Aug 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:40 on Aug 18,2021
+# vcom -reportprogress 300 -93 -work work /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity interfaceWithCounter
+# -- Compiling architecture struct of interfaceWithCounter
+# End time: 15:19:40 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:51 on Aug 18,2021
+# vcom -reportprogress 300 -work work /home/calindra/Documentos/Trabalho_1/interfaceWithCounter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity interfaceWithCounter
+# -- Compiling architecture struct of interfaceWithCounter
+# End time: 15:19:51 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:19:51 on Aug 18,2021
+# vcom -reportprogress 300 -work work /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity interfaceWithCounterTest
+# -- Compiling architecture Behavior of interfaceWithCounterTest
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(24): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(59): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(65): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(68): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(71): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(74): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(77): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(80): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: /home/calindra/Documentos/Trabalho_1/interfaceWithCounterTest.vhd(83): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:19:51 on Aug 18,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 10
+vsim work.interfacewithcountertest
+# vsim work.interfacewithcountertest 
+# Start time: 15:20:00 on Aug 18,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.interfacewithcountertest(behavior)
+# Loading work.interfacewithcounter(struct)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter(struct)
+# Loading work.interface(struct)
+# Loading work.alu(struct)
+# Loading work.addersubtractor(struct)
+# Loading work.fulladder(behavior)
+# Loading work.binaryto7seghex(behavioral)
+add wave -position insertpoint  \
+sim:/interfacewithcountertest/b \
+sim:/interfacewithcountertest/selector \
+sim:/interfacewithcountertest/cout \
+sim:/interfacewithcountertest/overflow \
+sim:/interfacewithcountertest/zero \
+sim:/interfacewithcountertest/negative \
+sim:/interfacewithcountertest/a7Seg \
+sim:/interfacewithcountertest/b7Seg \
+sim:/interfacewithcountertest/result7Seg \
+sim:/interfacewithcountertest/clk \
+sim:/interfacewithcountertest/rst \
+sim:/interfacewithcountertest/ld \
+sim:/interfacewithcountertest/clockPeriod
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 1  Instance: /interfacewithcountertest/uut/counterOperation
+# End time: 15:22:21 on Aug 18,2021, Elapsed time: 0:02:21
+# Errors: 0, Warnings: 1

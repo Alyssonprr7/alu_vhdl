@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/mnt/08e0e36e-8b56-4f13-a54a-68c5c4dd64bc/Pessoal/Faculdade/Sistemas Digitais/Trabalho_1/adderSubtractor.vhd}
+
